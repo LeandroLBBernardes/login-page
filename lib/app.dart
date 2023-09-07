@@ -13,9 +13,9 @@ class App extends StatelessWidget {
       title: 'Login Page',
       theme: ThemeData(
         appBarTheme: AppBarTheme(
-          color: HexColor(ColorStyles.black.code)
+          color: HexColor(ColorStyles.black.hexCode)
         ),
-        scaffoldBackgroundColor: HexColor(ColorStyles.background.code)
+        scaffoldBackgroundColor: HexColor(ColorStyles.background.hexCode)
       ),
       debugShowCheckedModeBanner: false,
       routerConfig: routes,
