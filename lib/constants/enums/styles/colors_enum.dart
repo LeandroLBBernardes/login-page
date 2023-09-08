@@ -6,7 +6,6 @@ enum ColorStyles {
   const ColorStyles({required this.hexCode});
 
   final String hexCode;
-
 }
 
 // extension ColorHexCode on ColorStyles{
