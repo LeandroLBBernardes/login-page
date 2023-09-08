@@ -1,4 +1,5 @@
 {
     "language": "english",
-    "login": "Login"
+    "login": "Bem Vindo!",
+    "login_button": "Login"
 }

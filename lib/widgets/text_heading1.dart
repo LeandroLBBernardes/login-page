@@ -17,7 +17,7 @@ class TextH1 extends StatelessWidget {
           title,
           style: const TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 28
+            fontSize: 32
           ),
         ),
         const SizedBox(height: 10,)
