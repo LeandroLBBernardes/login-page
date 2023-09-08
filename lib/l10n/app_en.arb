@@ -1,5 +1,6 @@
 {
     "language": "english",
-    "login": "Bem Vindo!",
+    "app_title": "Login Page",
+    "login": "Login",
     "login_button": "Login"
 }

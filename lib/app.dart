@@ -10,27 +10,31 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'Login Page',
+    return  GestureDetector(
+      onTap: () => FocusScope.of(context).requestFocus(FocusNode()),
+      child: MaterialApp.router(
+        title: 'Login Page',
+        
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+
+        theme: ThemeData(
+          appBarTheme: AppBarTheme(
+            color: HexColor(ColorStyles.black.hexCode)
+          ),
+          scaffoldBackgroundColor: HexColor(ColorStyles.background.hexCode),
+          fontFamily: 'Poppins',
+          textTheme: TextTheme(
+            bodyMedium: TextStyle(
+              color: HexColor(ColorStyles.black.hexCode),
+            )
+          ),
+        ),
       
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
-
-      theme: ThemeData(
-        appBarTheme: AppBarTheme(
-          color: HexColor(ColorStyles.black.hexCode)
-        ),
-        scaffoldBackgroundColor: HexColor(ColorStyles.background.hexCode),
-        fontFamily: 'Poppins',
-        textTheme: TextTheme(
-          bodyMedium: TextStyle(
-            color: HexColor(ColorStyles.black.hexCode),
-          )
-        ),
+        debugShowCheckedModeBanner: false,
+        routerConfig: routes,
       ),
-
-      debugShowCheckedModeBanner: false,
-      routerConfig: routes,
     );
+    
   }
 }

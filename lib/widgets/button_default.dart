@@ -20,7 +20,7 @@ class DefaultButton extends StatelessWidget {
 
     return Column(
       children: [
-        const SizedBox(height: 5,),
+        const SizedBox(height: 8,),
         SizedBox(
           height: 44,
           width: sizedScreen,
@@ -41,7 +41,7 @@ class DefaultButton extends StatelessWidget {
             )
           ),
         ),
-        const SizedBox(height: 5,)
+        const SizedBox(height: 8,)
       ],
     );
   }

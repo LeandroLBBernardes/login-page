@@ -12,7 +12,7 @@ class TextH1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: 10,),
+        const SizedBox(height: 8,),
         Text(
           title,
           style: const TextStyle(
@@ -20,7 +20,7 @@ class TextH1 extends StatelessWidget {
             fontSize: 32
           ),
         ),
-        const SizedBox(height: 10,)
+        const SizedBox(height: 8,)
       ],
     );
   }
