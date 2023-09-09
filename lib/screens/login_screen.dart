@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
-import 'package:login_page/constants/enums/styles/colors_enum.dart';
 import 'package:login_page/widgets/text_heading1.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../widgets/button_default.dart';
+import '../widgets/forget_password.dart';
 import '../widgets/textfield_email.dart';
 import '../widgets/textfield_password.dart';
 
@@ -22,7 +21,7 @@ class LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Padding(
-        padding: const EdgeInsets.all(36),
+        padding: const EdgeInsets.all(32),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,26 +39,7 @@ class LoginScreenState extends State<LoginScreen> {
               text: AppLocalizations.of(context)!.login_button, 
               action: (){}
             ),
-            Center(
-              child: Row(
-                children: [
-                  const Text('Esqueceu sua senha?'),
-                  TextButton(
-                    onPressed: (){}, 
-                    style: TextButton.styleFrom(
-                      foregroundColor: HexColor(ColorStyles.purple.hexCode) // Text Color
-                    ),
-                    child: Text(
-                      'Clique aqui',
-                      style: TextStyle(
-                        color: HexColor(ColorStyles.purple.hexCode),
-                        fontWeight: FontWeight.bold
-                      ),
-                    )
-                  )
-                ],
-              ),
-            )
+            const ForgetPasswordWidget()
           ],
         ),
       ),

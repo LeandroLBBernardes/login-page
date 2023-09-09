@@ -33,9 +33,12 @@ class EmailTextField extends StatelessWidget {
           height: 44,
           child: TextField(
             textAlignVertical: TextAlignVertical.center,
+            keyboardType: TextInputType.emailAddress,
             cursorColor: HexColor(ColorStyles.black.hexCode),
             decoration: InputDecoration(
               contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              filled: true,
+              fillColor: Colors.white,
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                   width: 1, 
@@ -48,7 +51,7 @@ class EmailTextField extends StatelessWidget {
                 color: HexColor(ColorStyles.black.hexCode)
               ),
             ),
-            style: const TextStyle(fontSize: 16)
+            style: const TextStyle(fontSize: 14)
           ),
         ),
         const SizedBox(height: 8,)

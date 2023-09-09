@@ -6,12 +6,14 @@ class DefaultButton extends StatelessWidget {
   final String text;
   final Function() action;
   final ButtonType buttonType;
+  final bool loading;
 
   const DefaultButton({
     Key? key,
     required this.text,
     required this.action,
-    this.buttonType = ButtonType.primary
+    this.buttonType = ButtonType.primary,
+    this.loading = false
   }) : super(key: key);
 
   @override
@@ -31,14 +33,22 @@ class DefaultButton extends StatelessWidget {
               ),
             ),
             onPressed: action, 
-            child: Text(
-              text,
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-                color: Colors.white
-              ),
-            )
+            child: loading 
+              ? const SizedBox(
+                width: 20,
+                height: 20,
+                child: CircularProgressIndicator(
+                  color: Colors.white,
+                ),
+              )
+              : Text(
+                text,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white
+                ),
+              )
           ),
         ),
         const SizedBox(height: 8,)

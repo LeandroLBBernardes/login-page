@@ -37,6 +37,8 @@ class PasswordTextField extends StatelessWidget {
             cursorColor: HexColor(ColorStyles.black.hexCode),
             decoration: InputDecoration(
               contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              filled: true,
+              fillColor: Colors.white,
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                   width: 1, 
@@ -49,7 +51,7 @@ class PasswordTextField extends StatelessWidget {
                 color: HexColor(ColorStyles.black.hexCode)
               ),
             ),
-            style: const TextStyle(fontSize: 16)
+            style: const TextStyle(fontSize: 14)
           ),
         ),
         const SizedBox(height: 8,)
