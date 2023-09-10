@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:login_page/screens/login_screen.dart';
 
@@ -9,12 +10,39 @@ final routes = GoRouter(
     GoRoute(
       name: 'login_screen',
       path: '/',
-      builder: (context, state) => const LoginScreen(),
+      pageBuilder: (context, state) {
+        return CustomTransitionPage(
+          transitionDuration: const Duration(milliseconds: 600),
+          key: state.pageKey,
+          child: const LoginScreen(),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return FadeTransition(
+              opacity:
+                  CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+              child: child,
+            );
+          },
+        );
+      },
     ),
     GoRoute(
       name: 'home_screen',
       path: '/home',
-      builder: (context, state) => const HomeScreen(),
-    )
+      pageBuilder: (context, state) {
+        return CustomTransitionPage(
+          transitionDuration: const Duration(milliseconds: 600),
+          key: state.pageKey,
+          child: const HomeScreen(),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            
+            return FadeTransition(
+              opacity:
+                  CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+              child: child,
+            );
+          },
+        );
+      },
+    ),
   ],
 );

@@ -4,6 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../widgets/button_default.dart';
 import '../widgets/forget_password.dart';
+import '../widgets/text_button_default.dart';
 import '../widgets/textfield_email.dart';
 import '../widgets/textfield_password.dart';
 
@@ -21,7 +22,7 @@ class LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Padding(
-        padding: const EdgeInsets.all(32),
+        padding: const EdgeInsets.all(24),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -39,7 +40,10 @@ class LoginScreenState extends State<LoginScreen> {
               text: AppLocalizations.of(context)!.login_button, 
               action: (){}
             ),
-            const ForgetPasswordWidget()
+            const ForgetPasswordWidget(),
+            const TextButtonDefault(
+              text: 'Cadastrar',
+            ),
           ],
         ),
       ),

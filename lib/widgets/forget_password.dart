@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
-
-import '../constants/enums/styles/colors_enum.dart';
+import 'package:go_router/go_router.dart';
+import 'package:login_page/widgets/text_button_default.dart';
 
 class ForgetPasswordWidget extends StatelessWidget {
   const ForgetPasswordWidget({
@@ -10,26 +9,15 @@ class ForgetPasswordWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          const Text('Esqueceu sua senha?'),
-          TextButton(
-            onPressed: (){}, 
-            style: TextButton.styleFrom(
-              foregroundColor: HexColor(ColorStyles.purple.hexCode) // Text Color
-            ),
-            child: Text(
-              'Clique aqui',
-              style: TextStyle(
-                color: HexColor(ColorStyles.purple.hexCode),
-                fontWeight: FontWeight.bold
-              ),
-            )
-          )
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        const Text('Esqueceu sua senha?'),
+        TextButtonDefault(
+          text: 'Clique aqui',
+          action: () => context.go('/home'),
+        )
+      ],
     );
   }
 }
